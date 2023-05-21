@@ -14,7 +14,7 @@ For exmaple:
 class Employee {
     private String name;
     private double salary;
-    public Employee(String name, salary) {
+    public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
     }
@@ -22,7 +22,7 @@ class Employee {
 
 class Manager extends Employee {
     private double bonus;
-    public Manager(String name, salary, double bonus) {
+    public Manager(String name, double salary, double bonus) {
         super(name, salary); // calling Employee's constructor
         this.bonus = bonus;
     }
@@ -43,3 +43,36 @@ What is the need of executing parent's constructor?
 ### **Answer:**
 [See answer in the Question 1](#question-1)
 
+### **Question 3:**
+Is it true that a parent class object is automatically created whenever we create a child class object?
+### **Answer:**
+<span>
+No, it is not true that a parent class object is automatically created whenever we create a child class object. Each class, including the parent and child classes, has its own separate object. However, the child class object can inherit certain properties and behaviors from the parent class.
+Let see with this example:
+
+```java
+class Parent {
+    public Parent() {
+        System.out.println(this.hashCode()); // 366712642
+    }
+}
+
+class Child extends Parent {
+    public Child() {
+    	System.out.println(this.hashCode()); // 366712642
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+    	Child child = new Child();
+        System.out.println(child.hashCode()); // 366712642
+    }
+}
+OUTPUT: 
+366712642
+366712642
+366712642
+```
+As we can see, both the child and parent produce the same hashcode. This means that whenever we create a child object, the parent object will not be created. Hence, it is proven.
+</span>
