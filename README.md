@@ -1,4 +1,4 @@
-# java-interview-questions
+# Java Interview Questions and Answers
 Core Java interview questions for both experience &amp; fresher 
 <hr/>
 
