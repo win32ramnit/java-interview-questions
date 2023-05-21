@@ -1,6 +1,7 @@
 # java-interview-questions
 Core Java interview questions for both experience &amp; fresher 
 <hr/>
+
 ### **Question 1:**
 <h3>We cannot create an object for an **abstract** class, but an abstract class can contain a constructor. What is the need for it?</h3>
 
